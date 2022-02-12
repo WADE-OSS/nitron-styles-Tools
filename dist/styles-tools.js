@@ -121,6 +121,7 @@ customElements.define('dom-box', class extends HTMLElement {
     this.outerHTML = `<div class="${styles(TextClass)}">${this.innerHTML}</div>`
   };
 });
+
 customElements.define('dom-layout', class extends HTMLElement {
   connectedCallback() {
     var TextClass = "margin: 0;";
@@ -186,4 +187,41 @@ customElements.define('dom-layout', class extends HTMLElement {
     };
     this.outerHTML = `<div class="${styles(TextClass)}">${this.innerHTML}</div>`
   };
+});
+
+const nitron_styleTools_container = styles({
+  style:`
+      padding-left: 20%;
+      padding-right: 20%;
+  `,
+  media:{
+      size:"max-width: 790px",
+      style:`
+      padding-left: 7%;
+      padding-right: 7%;
+      display: block;
+      `
+      }
+});
+
+nitron.component('container',{
+  change:{
+    el:"div",
+    class:`${nitron_styleTools_container}`
+  }
+});
+
+const nitron_styleTools_card = styles(`
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 270px;
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+`);
+
+nitron.component('card',{
+  change:{
+    el:"div",
+    class:`${nitron_styleTools_card}`
+  }
 });
