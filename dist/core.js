@@ -20,7 +20,7 @@ class NitronStyles {
             className += chars.substring(rnum, rnum + 1)
           };
           nitron.styles(`.${className}`,ComponentOptions.style);
-          this.outerHTML = nitron.createElement(ComponentOptions.el,{class:className},"오......");
+          this.outerHTML = nitron.createElement(ComponentOptions.el,{class:className},this.innerHTML);
 
         };
       };
