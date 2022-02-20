@@ -20,6 +20,7 @@ styles.component('text',{
     padding-bottom: {{py}};
     padding-left: {{px}};
     padding-right: {{px}};
+    font-weight: {{weight}};
   `,
   props:{
     m:"0",
@@ -50,6 +51,8 @@ styles.component('box',{
     padding-right: {{px}};
     width: {{width}};
     height: {{height}};
+    display: {{display}};
+    background-color:{{bg}};
   `,
   props:{
     m:"0"
@@ -59,14 +62,34 @@ styles.component('box',{
 styles.component('card',{
   el:"div",
   style:`
-    border-radius: 4px;
+    border-radius: 7px;
     display: {{display}};
     min-width: {{width}};
+    width: {{width}};
     max-width: 100%;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
   `,
   props:{
     width:"270px",
+    display:"inline-block"
+  }
+});
+
+styles.component('button',{
+  el:"a",
+  style:`
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    display: {{display}};
+    max-width: 100%;
+    padding: 5px 14px 7px 14px;
+    background-color: #3B82F6;
+    color: #fff;
+    text-decoration:none;
+    line-height: normal;
+  `,
+  props:{
     display:"inline-block"
   }
 });
