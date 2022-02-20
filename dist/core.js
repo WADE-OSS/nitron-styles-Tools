@@ -9,6 +9,8 @@ class NitronStyles {
     }else{
       componentName = `dom-${elementName}`
     };
+
+    // There is a fatal bug where you cannot use the same component multiple times (#5) : resolved
     customElements.define(componentName, class extends HTMLElement {
       connectedCallback() {
         if(ComponentOptions.el){
@@ -36,7 +38,7 @@ class NitronStyles {
                 };
               };
             });
-          };  
+          };
           if(ComponentOptions.props){
             Object.keys(ComponentOptions.props).forEach(x => {
               componentStyles = componentStyles.replace(new RegExp(`\{\{ ?${x} ?\}\}`,"g"), ComponentOptions.props[x]);
