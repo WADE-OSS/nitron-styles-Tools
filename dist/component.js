@@ -93,3 +93,21 @@ styles.component('button',{
     display:"inline-block"
   }
 });
+
+styles.component('container',{
+  el:"div",
+  style:`
+    padding-top: {{top}};
+    padding-right: {{right}};
+    padding-bottom: {{bottom}};
+    padding-left: {{left}};
+    padding-top: {{y}};
+    padding-bottom: {{y}};
+    padding-left: {{x}};
+    padding-right: {{x}};
+  `,
+  props:{
+    x:"17%",
+    y:"120px"
+  }
+});
