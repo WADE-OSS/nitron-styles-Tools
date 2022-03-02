@@ -12,7 +12,7 @@ styles Tools use Nitron's native component functionality. Do not arbitrarily cre
 ```html
 <script src="https://cdn.jsdelivr.net/gh/WADE-OSS/nitron-styles-Tools@0.0.1/dist/styles-tools.js" integrity="sha384-aEYpaWnJOruh8BY8fgk3Oo/pTknVav8FngW1Pvw34YfHcPObeTG5iTzXfhsZIdNk" crossorigin="anonymous"></script>
 ```
-Nitron Styles Tools can only be used with Nitron.js v0.0.5 or higher. [Read more](https://nitronjs.org/styles-tools/docs/getting-started)
+Nitron Styles Tools can only be used with Nitron.js v1.0.0 or higher. [Read more](https://nitronjs.org/styles-tools/docs/getting-started)
 
 ## Examples
 All components are prepared in [web documents](https://nitronjs.org/styles-tools/docs).
